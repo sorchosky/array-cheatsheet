@@ -7,7 +7,7 @@
 }
 
 button {
-	background-color: #2196F3;
+	background-color: $accent-color;
 	border: none;
 	outline: none;
 	padding: 0.5em 1em;
@@ -15,6 +15,10 @@ button {
 	cursor: pointer;
 	margin: auto;
 	transition: 0.3s;
+}
+
+button.modal-toggle::before {
+	content: 'View Code'
 }
 
 button:hover {

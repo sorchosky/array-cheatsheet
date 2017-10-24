@@ -1,1 +1,31 @@
 /* ##Desktop */
+
+div #wrapper
+	{
+		display:flex;
+		justify-content: space-between;
+	}
+
+section#intro{
+	filter: drop-shadow($shadow);
+	width: 20%;
+	max-width: 30em;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	padding: 0 4em;
+	z-index: 5;
+}
+
+#function-list-wrapper {
+	display: block;
+	width: 80%;
+	margin-left: 20%;
+}
+
+div#function-list {
+	padding: 4em 10em;
+	max-width: 180em;
+}

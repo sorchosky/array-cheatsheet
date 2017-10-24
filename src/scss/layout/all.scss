@@ -5,21 +5,16 @@ html{
 }
 
 div.wrapper {
-  max-width: 72em;
   margin: auto;
 }
 
 section#intro{
-	filter: drop-shadow(0px 2px 5px #BBDEFB);
+	filter: drop-shadow($shadow);
 	width: 100%;
 	background-color: white;
 	padding: 4em 0;
 	position: fixed;
 	z-index: 5;
-}
-
-section#intro > * {
-	padding: 0 0.5em;
 }
 
 hr {
@@ -30,15 +25,14 @@ hr {
 }
 
 div#function-list {
-	padding-top: 30em;
+	padding-top: 37em;
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 144em;
 	margin: auto;
 }
 
 section.function {
-	filter: drop-shadow(0px 2px 5px #BBDEFB);
+	filter: drop-shadow($shadow);
 	max-width:40em;
 	width: 100%;
 	background-color: white;

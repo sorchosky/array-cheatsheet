@@ -1,5 +1,5 @@
 .modal {
-	position: absolute;
+	position: fixed;
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
@@ -48,7 +48,6 @@
 }
 
 .modal-content {
-	visibility: hidden;
 }
 
 /****************

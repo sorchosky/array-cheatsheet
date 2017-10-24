@@ -10,94 +10,132 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- Page-Specific Stylesheets -->
-  <link rel="stylesheet" href="css//index.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
   <div id="wrapper">
 
     <section id="intro">
-      <h1>Javascript Array Functions</h1>
-      <p>A collection of functions to be used with Javascript Arrays.</p>
-      <hr>
-      <h2>Here is the array to be altered:</h2>
-      <h4>[8, 6, 9, 12, 54, 109, 1, 14, 62, 3]</h4>
+      <div>
+        <h1>Javascript Array Functions</h1>
+        <p>A collection of functions to be used with Javascript Arrays.</p>
+        <hr>
+        <h4>Results based on this array:</h4>
+        <h3>[ 8, 6, 9, 12, 54, 109, 1, 14, 62, 3 ]</h3>
+      </div>
     </section>
     
-    <div id="function-list">
+    <div id="function-list-wrapper">
+      <div id="function-list">
 
-      <section class="function" data-target="01">
-        <h3>Largest Number</h3>
-        <p>Use Math.max to get the largest number from an array</p>
-        <h4 id="max"></h4>
-        <div class="button-wrapper">
-          <button type="button" class="modal-toggle">Get Code</button>
-        </div>
-      </section>
+        <section class="function" data-target="01">
+          <h3 class="title">Largest Number</h3>
+          <p>Use Math.max to get the largest number from an array.</p>
+          <div class="flex">
+            <h4 id="max"></h4>
+            <div class="button-wrapper">
+              <button type="button" class="modal-toggle"></button>
+            </div>
+          </div>
+          <div class="code-block-hidden">
+            <div class="code-block">
+              <code>var max = Math.max.apply(null, numbers);</code>
+              <code>return max;</code>
+            </div>
+          </div>
+        </section>
+
+        <section class="function" data-target="02">
+          <h3 class="title">Smallest Number</h3>
+          <p>Use Math.min to get the smallest number from an array.</p>
+          <div class="flex">
+            <h4 id="min"></h4>
+            <div class="button-wrapper">
+              <button type="button" class="modal-toggle"></button>
+            </div>
+          </div>
+          <div class="code-block-hidden">
+            <div class="code-block">
+              <code>var min = Math.min.apply(null, numbers);</code>
+              <code>return min;</code>
+            </div>
+          </div>
+        </section>
+
+        <section class="function" data-target="03">
+          <h3 class="title">Sum of Array</h3>
+          <p>Use .reduce() to combine all elements of an array into one.</p>
+          <div class="flex">
+            <h4 id="reduce-sum"></h4>
+            <div class="button-wrapper">
+              <button type="button" class="modal-toggle"></button>
+            </div>
+          </div>
+          <div class="code-block-hidden">
+            <div class="code-block">
+              <code>var sum = numbers.reduce(add, 0);</code>
+              <code>function add(a, b) {</code>
+              <code>&emsp;return a + b;</code>
+              <code>}</code>
+            </div>
+          </div>
+        </section>
+
+        <section class="function" data-target="04">
+          <h3 class="title">Least to Greatest</h3>
+          <p>Create a function that takes the inputs (a, b), sort them, and run the array through a sort(); method with the input of your function.</p>
+          <div class="flex">
+            <h4 id="least-to-greatest"></h4>
+            <div class="button-wrapper">
+              <button type="button" class="modal-toggle"></button>
+            </div>
+          </div>
+          <div class="code-block-hidden">
+            <div class="code-block">
+              <code>function sortNumber(a,b) {</code>
+              <code>&emsp;return a - b;</code>
+              <code>}</code>
+              <code>var sortLeastToGreatest = numbers.sort(sortNumber);</code>
+            </div>
+          </div>
+        </section>
+
+        <section class="function" data-target="05">
+          <h3 class="title">Greatest to Least</h3>
+          <p>Same as Least to Greatest, but change the function to return b - a.</p>
+          <div class="flex">
+            <h4 id="greatest-to-least"></h4>
+            <div class="button-wrapper">
+              <button type="button" class="modal-toggle"></button>
+            </div>
+          </div>
+          <div class="code-block-hidden">
+            <div class="code-block">
+              <code>function sortNumber(a,b) {</code>
+              <code>&emsp;return b - a;</code>
+              <code>}</code>
+              <code>var sortGreatestToLeast = numbers.sort(sortNumber);</code>
+            </div>
+          </div>
+        </section>
 
 
-      <section class="function" data-target="02">
-        <h3>Smallest Number</h3>
-        <p>Use Math.min to get the smallest number from an array</p>
-        <h4 id="min"></h4>
-        <div class="button-wrapper">
-          <button type="button" class="modal-toggle">Get Code</button>
-        </div>
-      </section>
-
-      <section class="function" data-target="03">
-        <h3>Sum of Array</h3>
-        <p>Use .reduce() to combine all elements of an array into one.</p>
-        <h4 id="reduce-sum"></h4>
-        <div class="button-wrapper">
-          <button type="button" class="modal-toggle">Get Code</button>
-        </div>
-      </section>
-
-
-      <!-- Modal Styling -->
-      <div class="modal modal-01">
-        <div class="modal-overlay">
-          <div class="modal-wrapper">
-            <div class="modal-content-01">
-              <h2></h2>
-              <div class="code-block">
-                <code>var max = Math.max.apply(null, numbers);</code>
-                <code>return max;</code>
+        <!-- Modal Styling -->
+        <div class="modal">
+          <div class="modal-overlay">
+            <div class="modal-wrapper">
+              <div class="modal-content">
               </div>
             </div>
           </div>
         </div>
+
+      <!-- Close Function List -->
       </div>
-      <div class="modal modal-02">
-        <div class="modal-overlay">
-          <div class="modal-wrapper">
-            <div class="modal-content-02">
-              
-              <div class="code-block">
-                <code>var min = Math.min.apply(null, numbers);</code>
-                <code>return min;</code>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal modal-03">
-        <div class="modal-overlay">
-          <div class="modal-wrapper">
-            <div class="modal-content-03">
-              
-              <div class="code-block">
-                <code>var sum = numbers.reduce(add, 0);</code>
-                <code>function add(a, b) {</code>
-                <code>&emsp;return a + b;</code>
-                <code>}</code>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- Close Function List Wrapper -->
     </div>
+  <!-- Close Wrapper -->
   </div>
 </body>
 

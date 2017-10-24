@@ -96,16 +96,18 @@ h1, h2, h3, h4, h5, h6, p, a {
   text-align: center; }
 
 h1, h2, h3, h4 {
-  font-family: 'Lora', serif;
+  font-family: "Lora", Georgia, serif;
   color: #263238;
   padding: 0;
-  margin: 0 0 0.25em 0; }
+  margin: 0 0 0.25em 0;
+  line-height: 1.2; }
 
-h5, h6, p, a {
-  font-family: 'Source Sans Pro', sans-serif;
+h5, h6, p, a, button {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   color: #757575;
   padding: 0;
-  margin: 0 0 0.25em 0; }
+  margin: 0 0 0.25em 0;
+  line-height: 1.55; }
 
 h1 {
   font-size: 3.6em;
@@ -114,10 +116,11 @@ h1 {
 h2 {
   font-size: 2.7em;
   font-style: italic;
-  margin-bottom: 0.5em; }
+  padding-bottom: 1em; }
 
 h3 {
-  font-size: 2.1em; }
+  font-size: 2.1em;
+  padding-bottom: 0.5em; }
 
 h4 {
   font-size: 1.8em; }
@@ -134,8 +137,21 @@ p {
   font-size: 1.6em;
   margin-bottom: 1em; }
 
+button {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em; }
+
 section#intro p {
   font-size: 2.4em; }
+
+section#intro h4 {
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  color: #757575;
+  letter-spacing: 0.05em;
+  font-weight: 300; }
 
 /* ##Buttons */
 .button-wrapper {
@@ -156,11 +172,14 @@ button {
   -webkit-transition: 0.3s;
   transition: 0.3s; }
 
+button.modal-toggle::before {
+  content: 'View Code'; }
+
 button:hover {
   background-color: #03A9F4; }
 
 .modal {
-  position: absolute;
+  position: fixed;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -215,9 +234,6 @@ button:hover {
 .visible .modal-wrapper {
   margin-top: 0em; }
 
-.modal-content {
-  visibility: hidden; }
-
 /****************
 Code Display
 ****************/
@@ -244,7 +260,6 @@ html {
   font-size: 62.5%; }
 
 div.wrapper {
-  max-width: 72em;
   margin: auto; }
 
 section#intro {
@@ -256,9 +271,6 @@ section#intro {
   position: fixed;
   z-index: 5; }
 
-section#intro > * {
-  padding: 0 0.5em; }
-
 hr {
   width: 2em;
   margin: auto;
@@ -266,13 +278,12 @@ hr {
   margin-bottom: 2em; }
 
 div#function-list {
-  padding-top: 30em;
+  padding-top: 37em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 144em;
   margin: auto; }
 
 section.function {
@@ -286,10 +297,58 @@ section.function {
   z-index: 3; }
 
 @media all and (min-width: 768px) {
-  /* ##Tablet */ }
+  /* ##Tablet */
+  .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .flex h4 {
+      display: inline-block;
+      width: 100%; }
+    .flex .button-wrapper {
+      width: 100%;
+      margin-top: 0; } }
 
 @media all and (min-width: 1080px) {
-  /* ##Desktop */ }
+  /* ##Desktop */
+  div #wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  section#intro {
+    -webkit-filter: drop-shadow(0px 2px 5px #BBDEFB);
+    filter: drop-shadow(0px 2px 5px #BBDEFB);
+    width: 20%;
+    max-width: 30em;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: white;
+    padding: 0 4em;
+    z-index: 5; }
+  #function-list-wrapper {
+    display: block;
+    width: 80%;
+    margin-left: 20%; }
+  div#function-list {
+    padding: 4em 10em;
+    max-width: 180em; } }
 
 @media all and (min-width: 1440px) {
   /* ##Large-Desktop */ }

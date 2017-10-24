@@ -22,7 +22,7 @@ gulp.task('serve', function() {
 });
 
 // Compile sass into CSS & auto-inject into browsers
-gulp.task('sass', function() {
+gulp.task('sass-style', function() {
         gulp.src('./src/scss/style.scss')
         .pipe(sass())
         .pipe(autoprefixer({
@@ -32,6 +32,20 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./build'))
         .pipe(browserSync.stream());
 });
+
+// Compile sass into CSS & auto-inject into browsers
+gulp.task('sass-pages', function() {
+        gulp.src('./src/scss/pages/*.scss')
+        .pipe(sass())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('./build/css'))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('sass', ['sass-style', 'sass-pages'])
 
 // Copy html to build file
 gulp.task('copy-html', function() {

@@ -14,3 +14,17 @@ function add(a, b) {
   return a + b;
 }
 document.getElementById("reduce-sum").innerHTML = "Result: " + sum;
+
+//least to greatest
+function sortNumber(a,b) {
+	return a - b;
+}
+var sortLeastToGreatest = numbers.sort(sortNumber);
+document.getElementById("least-to-greatest").innerHTML = "Result: " + sortLeastToGreatest;
+
+//greatest to least
+function sortNumberTwo(a,b) {
+	return b - a;
+}
+var sortGreatestToLeast = numbers.sort(sortNumberTwo);
+document.getElementById("greatest-to-least").innerHTML = "Result: " + sortGreatestToLeast;
