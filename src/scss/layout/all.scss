@@ -1,0 +1,48 @@
+/* ##All */
+
+html{
+  font-size: 62.5%;
+}
+
+div.wrapper {
+  max-width: 72em;
+  margin: auto;
+}
+
+section#intro{
+	filter: drop-shadow(0px 2px 5px #BBDEFB);
+	width: 100%;
+	background-color: white;
+	padding: 4em 0;
+	position: fixed;
+	z-index: 5;
+}
+
+section#intro > * {
+	padding: 0 0.5em;
+}
+
+hr {
+	width: 2em;
+	margin: auto;
+	border:  2px solid #263238;
+	margin-bottom: 2em;
+}
+
+div#function-list {
+	padding-top: 30em;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 144em;
+	margin: auto;
+}
+
+section.function {
+	filter: drop-shadow(0px 2px 5px #BBDEFB);
+	max-width:40em;
+	width: 100%;
+	background-color: white;
+	margin: 2em auto;
+	padding: 2em;
+	z-index: 3;
+}

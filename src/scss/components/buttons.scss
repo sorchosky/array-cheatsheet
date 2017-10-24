@@ -1,0 +1,22 @@
+/* ##Buttons */
+
+.button-wrapper {
+	display: flex;
+	margin-top: 2em;
+	width: 100%;
+}
+
+button {
+	background-color: #2196F3;
+	border: none;
+	outline: none;
+	padding: 0.5em 1em;
+	color: #fff;
+	cursor: pointer;
+	margin: auto;
+	transition: 0.3s;
+}
+
+button:hover {
+	background-color: #03A9F4;
+}

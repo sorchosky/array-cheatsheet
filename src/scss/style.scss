@@ -1,0 +1,64 @@
+/*
+Title: [New Website]
+Author: steve@steveorchosky.com
+Version: 1.0
+
+############################
+TABLE OF CONTENTS
+############################
+
+#Reset
+
+#Helpers
+  ##Fonts
+  ##Variables
+  ##Mixins
+
+#Components
+  ##Typography
+  ##Buttons
+  ##Header
+  ##Footer
+  
+#Layout
+  ##All
+  ##Tablet
+  ##Desktop
+  ##Large-Desktop
+
+*/
+
+@import 'helpers/reset';
+
+/*****
+#Helpers
+*****/
+
+@import 'helpers/fonts';
+@import 'helpers/variables';
+@import 'helpers/mixins';
+
+/*****
+#Components
+*****/
+
+@import 'components/typography.scss';
+@import 'components/buttons.scss';
+@import 'components/modal.scss';
+@import 'components/header.scss';
+@import 'components/footer.scss';
+
+/*****
+#Layout
+*****/
+
+@import 'layout/all.scss';
+@media all and (min-width: 768px) {
+  @import 'layout/tablet.scss';
+};
+@media all and (min-width: 1080px) {
+  @import 'layout/desktop.scss';
+}
+@media all and (min-width: 1440px) {
+  @import 'layout/large-desktop.scss';
+}
